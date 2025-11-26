@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class AddTrainingActivity extends AppCompatActivity {
 
     private EditText editName, editReps,editDuration;
-    private Button buttonSave;
+    private Button buttonSave, buttonCancel;
     private TrainingDbHelper dbHelper;
 
     @Override
@@ -26,11 +26,19 @@ public class AddTrainingActivity extends AppCompatActivity {
         editReps = findViewById(R.id.editRepsCount);
         editDuration = findViewById(R.id.editDurationCount);
         buttonSave = findViewById(R.id.buttonSave);
+        buttonCancel = findViewById(R.id.buttonCancel);
 
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 saveTraining();
+            }
+        });
+
+        buttonCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
