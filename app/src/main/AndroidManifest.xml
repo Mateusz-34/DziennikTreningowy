@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DziennikTreningowy">
         <activity
+            android:name=".TrainingListActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddTrainingActivity"
             android:exported="false" />
         <activity

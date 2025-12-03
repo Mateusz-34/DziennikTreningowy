@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class TrainingDbHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "workout.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
     public static final String TABLE_NAME = "trainings";
     public static final String COLUMN_ID = "_id";
@@ -17,6 +17,7 @@ public class TrainingDbHelper extends SQLiteOpenHelper {
     public static final String COLUMN_DATE = "date";
     public static final String COLUMN_DIFFICULTY = "difficulty";
 
+
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TABLE_NAME + " (" +
                     COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -25,7 +26,6 @@ public class TrainingDbHelper extends SQLiteOpenHelper {
                     COLUMN_DURATION + " INTEGER," +
                     COLUMN_DATE + " TEXT NOT NULL," +
                     COLUMN_DIFFICULTY + " TEXT NOT NULL);";
-
 
     public TrainingDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
